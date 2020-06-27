@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
+project(extractingKeypoints)
+find_package(PCL 1.3 REQUIRED)
+include_directories(${PCL_INCLUDE_DIRS} libs)
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
+add_executable(extractingKeypoints main.cpp)
+target_link_libraries(extractingKeypoints ${PCL_LIBRARIES})
